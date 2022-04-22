@@ -18,13 +18,9 @@ import db_connection.ConnectionProvider;
 @WebServlet("/checkFeedback")
 public class FeedbackController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+  
     public FeedbackController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     

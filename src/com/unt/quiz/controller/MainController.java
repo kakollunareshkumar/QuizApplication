@@ -119,11 +119,7 @@ public class MainController extends HttpServlet {
 				Document document=null;
 				try{
 				document=CreateDOM.getDOM(exam);
-				
-				//request.getSession().setAttribute("totalNumberOfQuizQuestions",document.getElementsByTagName("totalQuizQuestions").item(0).getTextContent());
-				//request.getSession().setAttribute("quizDuration",document.getElementsByTagName("quizDuration").item(0).getTextContent());
-				//request.getSession().setAttribute("min",document.getElementsByTagName("quizDuration").item(0).getTextContent());
-				//request.getSession().setAttribute("sec",0);
+			
 				request.getSession().setAttribute("totalNumberOfQuizQuestions","10");
 				request.getSession().setAttribute("quizDuration","10");
 				request.getSession().setAttribute("min","5");

@@ -19,20 +19,14 @@ import javax.servlet.http.Part;
 
 import db_connection.ConnectionProvider;
 
-/**
- * Servlet implementation class RegistrationController
- */
+
 @MultipartConfig
 @WebServlet("/checkRegister")
 public class RegistrationController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+  
     public RegistrationController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     
@@ -42,14 +36,11 @@ public class RegistrationController extends HttpServlet {
 		Collection<Part> parts = request.getParts();
 		String resp = "/WEB-INF/jsps/regSuccess.jsp";
 		if (parts.size() != 3) {
-	         //can write error page saying all details are not entered
 	       }
 		
 		 Part filePart = request.getPart("photo");
 	       InputStream imageInputStream = filePart.getInputStream();
-	       //read imageInputStream
-	       //filePart.write("somefiepath");
-	       //can also write the photo to local storage
+
 
 	      
 	       
@@ -65,9 +56,6 @@ public class RegistrationController extends HttpServlet {
 		try
 		{
 			PreparedStatement ps = con.prepareStatement("INSERT INTO users(username,password,email,mobile,city,photo) values(?,?,?,?,?,?)");
-
-		 //String sql = "INSERT INTO users(username,password,email,mobile,address) values ('"+username+"','"+password+"','"+email+"','"+mobile+"','"+city+"')";
-		 	//	System.out.println(sql);
 		 ps.setString(1, username);
 		 ps.setString(2, password);
 		 ps.setString(3, email);

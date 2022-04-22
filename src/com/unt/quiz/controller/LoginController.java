@@ -17,24 +17,15 @@ import javax.servlet.http.HttpSession;
 
 import db_connection.ConnectionProvider;
 
-/**
- * Servlet implementation class LoginController
- */
 @WebServlet("/checkLogin")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+   
     public LoginController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
