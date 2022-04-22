@@ -117,6 +117,20 @@ body {
 	              </div>
 	            </div>
 	          </div>
+	          
+	            <div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
+	            <div class="thumbnail">
+	            	             <img src="${pageContext.request.contextPath}/images/subramanya.jpg" alt="image"  style = "width:200px;height: 200px;"/>
+	            
+	              <div class="caption">
+	                <h3>subramanya</h3>
+	                <p>Mobile : 0000000000</p>
+	                <p><a href="mailto:bhavya1234@gmail.com">subramanya1234@gmail.com</a></p>
+	              </div>
+	            </div>
+	          </div>
+	          
+	          
 	              <div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
 	            <div class="thumbnail">
 	            	             <img src="${pageContext.request.contextPath}/images/bhavya.jpg" alt="image"  style = "width:200px;height: 200px;"/>
@@ -129,7 +143,6 @@ body {
 	            </div>
 	          </div>
 	          
-	        <%-- </c:forEach> --%>
 	      </div>
 	    </section>
 	  

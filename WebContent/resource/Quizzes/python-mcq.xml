@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <quiz>
-  <title>Sample Quiz (2/20/2002)</title>
+  <title>Python Quiz</title>
    <totalquizquestions>10</totalquizquestions>
   <quizduration>10</quizduration>
     <questions>

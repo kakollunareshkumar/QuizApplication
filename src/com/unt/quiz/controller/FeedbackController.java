@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.unt.quiz.DatabaseConnectionFactory;
+
+import db_connection.ConnectionProvider;
 
 @WebServlet("/checkFeedback")
 public class FeedbackController extends HttpServlet {
@@ -35,7 +36,7 @@ public class FeedbackController extends HttpServlet {
 		String comment=request.getParameter("text");
 		
 		
-		Connection con=DatabaseConnectionFactory.createConnection();
+		Connection con=ConnectionProvider.getConnection();
 		
 		try
 		{

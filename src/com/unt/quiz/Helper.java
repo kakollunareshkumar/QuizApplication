@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+import db_connection.ConnectionProvider;
 
 public class Helper {
 
@@ -20,7 +20,7 @@ public class Helper {
   	
 		int count = 0;
 		
-		Connection con=DatabaseConnectionFactory.createConnection();
+		Connection con=ConnectionProvider.getConnection();
 		
 		try
 		{
@@ -52,7 +52,7 @@ public class Helper {
   	
 		int count = 0;
 		
-		Connection con=DatabaseConnectionFactory.createConnection();
+		Connection con=ConnectionProvider.getConnection();
 		
 		try
 		{
@@ -79,7 +79,7 @@ public class Helper {
 	{
 
 		List<ResultModel> list = new ArrayList<ResultModel>();
-		Connection con=DatabaseConnectionFactory.createConnection();
+		Connection con=ConnectionProvider.getConnection();
 		
 		try
 		{
@@ -108,7 +108,7 @@ public class Helper {
 	{
 
 		List<Users> list = new ArrayList<Users>();
-		Connection con=DatabaseConnectionFactory.createConnection();
+		Connection con=ConnectionProvider.getConnection();
 		
 		try
 		{

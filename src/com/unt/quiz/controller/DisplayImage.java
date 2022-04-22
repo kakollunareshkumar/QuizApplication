@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.unt.quiz.DatabaseConnectionFactory;
+
+import db_connection.ConnectionProvider;
 
 @WebServlet("/dowImg")
 public class DisplayImage extends HttpServlet{
@@ -53,7 +54,7 @@ public class DisplayImage extends HttpServlet{
 		System.out.print("I am inside getImageBytes");
 		Object[] obj = new Object[1];
 		if(id != null && !id.equalsIgnoreCase("0") && !id.equalsIgnoreCase("-1")){
-		try(Connection connection = DatabaseConnectionFactory.createConnection();
+		try(Connection connection = ConnectionProvider.getConnection();
 				PreparedStatement ps = connection.prepareStatement(sql))
 				{
 			ps.setString(1, id.trim());

@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.unt.quiz.DatabaseConnectionFactory;
+
+import db_connection.ConnectionProvider;
 
 /**
  * Servlet implementation class LoginController
@@ -39,7 +40,7 @@ public class LoginController extends HttpServlet {
 		
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");				
-		Connection con=DatabaseConnectionFactory.createConnection();		
+		Connection con=ConnectionProvider.getConnection();		
 		ResultSet set=null;
 		String id = "";
 		int i=0;

@@ -16,7 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import com.unt.quiz.DatabaseConnectionFactory;
+
+import db_connection.ConnectionProvider;
 
 /**
  * Servlet implementation class RegistrationController
@@ -59,7 +60,7 @@ public class RegistrationController extends HttpServlet {
 		String mobile=request.getParameter("mobile");
 		String city=request.getParameter("City");
 		
-		Connection con=DatabaseConnectionFactory.createConnection();
+		Connection con=ConnectionProvider.getConnection();
 		
 		try
 		{
