@@ -11,7 +11,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import com.unt.quiz.CreateDOM;
+import com.unt.quiz.BuildDocumentObjectModel;
 
 public class Exam {
 	Document dom;
@@ -24,7 +24,7 @@ public class Exam {
 	public ArrayList<QuizQuestion> questionList = new ArrayList<QuizQuestion>();
 	
 	public Exam(String test) throws SAXException,ParserConfigurationException,IOException, URISyntaxException{
-		dom=CreateDOM.getDOM(test);
+		dom=BuildDocumentObjectModel.getDOM(test);
 	}
 	
 		

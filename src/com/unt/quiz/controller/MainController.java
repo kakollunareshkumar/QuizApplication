@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.w3c.dom.Document;
 
-import com.unt.quiz.CreateDOM;
+import com.unt.quiz.BuildDocumentObjectModel;
 
 @WebServlet(urlPatterns = { "/login", "/register", "/takeExam", "/logout" ,"/feedback","/contact","/admin_login","/admin_validate","/view_results","/users","/feedback_results"})
 public class MainController extends HttpServlet {
@@ -118,7 +118,7 @@ public class MainController extends HttpServlet {
 						.getRequestDispatcher("/WEB-INF/jsps/quizDetails.jsp");
 				Document document=null;
 				try{
-				document=CreateDOM.getDOM(exam);
+				document=BuildDocumentObjectModel.getDOM(exam);
 			
 				request.getSession().setAttribute("totalNumberOfQuizQuestions","10");
 				request.getSession().setAttribute("quizDuration","10");

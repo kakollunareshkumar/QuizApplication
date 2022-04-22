@@ -13,7 +13,7 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 
-public class CreateDOM {
+public class BuildDocumentObjectModel {
 	
 	
 	public static Document getDOM(String test) throws SAXException,ParserConfigurationException,IOException, URISyntaxException
