@@ -18,9 +18,7 @@ body {
    <li class=''><a href='${pageContext.request.contextPath}'><span>Home</span></a></li>
    <li><a href='${pageContext.request.contextPath}/login'><span>Login</span></a></li>
    <li><a href='${pageContext.request.contextPath}/register'><span>Register</span></a></li>
-   <!-- <li class='#'><a href='#'><span>Submit a Question</span></a></li> -->
     <li><a href='${pageContext.request.contextPath}/feedback'><span>Feedback</span></a></li>
-   <!-- <li><a href='#'><span>Contribute</span></a></li> -->
    <li><a href='${pageContext.request.contextPath}/contact'><span>Contact us</span></a></li>
 </ul>
 </div>
@@ -29,12 +27,12 @@ body {
 
 <div style="position:absolute;left:500px;top:170px">
 <ul style="list-style-type:disc">
- <li>Quiz contains 10 Multiple Choice Questions</li>
- <li>Total time for the Quiz is 10 Minutes</li>
- <li>You can finish the exam at any time</li>
- <li>Read the question carefully before answering</li>
- <li>You can change your answers before submitting</li>
- <li>Good luck for the test.</li>
+ <li>Ten MCQ.</li>
+ <li>Time Limit 5 Minutes.</li>
+ <li>By clicking finish at any point of time will end quiz. Make sure you confirm twice before submitting quiz.</li>
+ <li>Review answer options carefully before answering a question.</li>
+ <li>You can make changes to submitted questions by clicking on previous and next.</li>
+ <li>All the best for taking exam.</li>
 </ul>  
 <br><br><br>
 </div>

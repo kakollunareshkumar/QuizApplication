@@ -9,17 +9,9 @@
     </title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-     <link rel="stylesheet" type="text/css" href="http://www.trirand.com/blog/jqgrid/themes/redmond/jquery-ui-1.8.1.custom.css"/>
-    <link rel="stylesheet" type="text/css" href="http://www.trirand.com/blog/jqgrid/themes/ui.jqgrid.css"/>
-    <script type="text/javascript" src="http://www.trirand.com/blog/jqgrid/js/jquery.js"></script>
-        <script type="text/javascript" src="http://www.trirand.com/blog/jqgrid/js/jquery-ui-1.8.1.custom.min.js"></script>
 
-        <script type="text/javascript" src="http://www.trirand.com/blog/jqgrid/js/jquery.layout.js"></script>
-        <script type="text/javascript" src="http://www.trirand.com/blog/jqgrid/js/i18n/grid.locale-en.js"></script>
-        <script type="text/javascript" src="http://www.trirand.com/blog/jqgrid/js/ui.multiselect.js"></script>
-        <script type="text/javascript" src="http://www.trirand.com/blog/jqgrid/js/jquery.jqGrid.min.js"></script>
-        <script type="text/javascript" src="http://www.trirand.com/blog/jqgrid/js/jquery.tablednd.js"></script>
-        <script type="text/javascript" src="http://www.trirand.com/blog/jqgrid/js/jquery.contextmenu.js"></script>
+
+
     
     <style type="text/css">
 body {
@@ -66,51 +58,9 @@ function formValidation()
 	
 	return true;
 }
-function showDialog()
-{
-	$( "#dialog" ).dialog({
-		height : 390,
-		position : "center",
-		
-		width : '64%',
-		draggable: false
-		
-	});	
-	loadDate();
-}
-var returnPhoto = function(cellVal,options,rowObject) {
-	
-	if(cellVal != null && cellVal != 'null' && cellVal != '-1' && cellVal != '0')
-	    return "<img src='"+cellVal+"' height='70' width='90' class = 'example1tooltip' style='cursor:pointer' alt='Photo' title = 'photo'>";  
-		else
-			return "";
-	};
-	
-function loadDate(){
-    $("#jqGrid1").jqGrid({
-    	url : '/OnlineQuiz/registerXml.jsp',
-		datatype : 'xml',
-		mtype : 'GET',
-		colNames : ['ID', 'User Name', 'email', 'Mobile','city',
-					 'Photo'],
-			
-            colModel: [
-            { label: 'id', name: 'id', key: true, width: 40,hidden : false },
-            { label: 'username', name: 'username', width: 150,hidden : true },
-            { label: 'email', name: 'email', width: 220 },
-            { label: 'mobile', name: 'mobile', width: 150 },
-            { label: 'city', name: 'city', width: 150 },
-            { label:'photo', name: 'photo', width: 150,formatter: returnPhoto }
-        ],
-		viewrecords: true,
-        width: 780,
-        height: 250,
-        rowNum: 10,
-        caption : "List of registerd users",
-        pager: "#jqGridPager1",
-       
-    });
-}
+
+
+
 </script>
 </head>
 <body>
@@ -143,10 +93,7 @@ function loadDate(){
 		%>
 		<h1> Register </h1>
 		
-		<div id="dialog" title="List of Registerd Users" style="display: none;">
-	<table id="jqGrid1"></table>
-    <div id="jqGridPager1"></div>
-</div>
+
 
 		
 		</div>

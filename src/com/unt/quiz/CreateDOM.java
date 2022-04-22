@@ -21,7 +21,7 @@ public class CreateDOM {
 		    Document dom=null;
 		    File quizFile=null;
 		    
-	        quizFile=new File("D:/Elipse_Programs/DBMS_Ecommerce/QuizApplication/WebContent/resource/Quizzes/"+test+"-quiz-1.xml");
+	        quizFile=new File("D:/Elipse_Programs/DBMS_Ecommerce/QuizApplication/WebContent/resource/Quizzes/"+test+"-mcq.xml");
 	        System.out.println("Quiz File Absolute Path "+quizFile.getAbsolutePath());
 	         
 	   DocumentBuilderFactory dbf=DocumentBuilderFactory.newInstance();

@@ -13,7 +13,7 @@ import org.w3c.dom.Document;
 
 import com.unt.quiz.CreateDOM;
 
-@WebServlet(urlPatterns = { "/login", "/register", "/takeExam", "/logout" ,"/feedback","/contact","/admin_login","/admin_validate","/view_results","/users"})
+@WebServlet(urlPatterns = { "/login", "/register", "/takeExam", "/logout" ,"/feedback","/contact","/admin_login","/admin_validate","/view_results","/users","/feedback_results"})
 public class MainController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -87,7 +87,16 @@ public class MainController extends HttpServlet {
 			RequestDispatcher dispatcher = request
 					.getRequestDispatcher("/WEB-INF/jsps/register.jsp");
 			dispatcher.forward(request, response);
-		} else if (request.getRequestURI().equals(
+		} 
+		
+		 else if (request.getRequestURI().equals(
+					applicationContextPath + "/feedback_results")) {
+				RequestDispatcher dispatcher = request
+						.getRequestDispatcher("/WEB-INF/jsps/feedback_results.jsp");
+				dispatcher.forward(request, response);
+			}
+		
+		else if (request.getRequestURI().equals(
 				applicationContextPath + "/takeExam")) {
 			request.getSession().setAttribute("currentExam", null);
 			request.getSession().setAttribute("totalNumberOfQuizQuestions",null);

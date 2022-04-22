@@ -12,7 +12,7 @@ body {
 }
 </style>
    <script src="script.js"></script>
-   <title>TechQ Online Quiz</title>
+   <title>UNT online quiz</title>
 </head>
 <body>
 
@@ -20,16 +20,14 @@ body {
 <ul>
    <li class=''><a href='#'><span>Home</span></a></li>
    <li><a href='login'><span>Login</span></a></li>
-   <li><a href='register'><span>Register</span></a></li>
-   <!-- <li class='#'><a href='#'><span>Submit a Question</span></a></li> -->
+   <li><a href='register'><span>Create Account</span></a></li>
     <li><a href='feedback'><span>Feedback</span></a></li>
-   <!-- <li><a href='#'><span>Contribute</span></a></li> -->
    <li><a href='${pageContext.request.contextPath}/contact'><span>Contact us</span></a></li>
 </ul>
 </div>
 
 <div style="position:absolute;left:350px;top:200px">
-<h3>Congratulation ${requestScope.newUser} your account created successfully , <a href="${pageContext.request.contextPath}/login">login </a>to take the exam.</h3>
+<h3>Awesome ${requestScope.newUser} your new account creation is complete ,</br> <a href="${pageContext.request.contextPath}/login">login with new credentials</a>to take the exam.</h3>
 </div>
 
 

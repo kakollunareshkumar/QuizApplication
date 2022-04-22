@@ -32,10 +32,10 @@ body {
 
 <div style="position:absolute;left:350px;top:200px">
 <h1>Thanks for your feedback!</h1>
-<p>We appreciate that you took the time to send us feedback. Your feedback has been sent to the webmaster.</p>
+<p>We appreciate that you took the time to send us feedback. Your feedback has been sent to the site admin.</p>
 
 
-<p><a href="${pageContext.request.contextPath}/feedback">Back to feedback form</a>.</p>
+<p><a href="${pageContext.request.contextPath}/feedback">Submit Another feedback</a>.</p>
 
 
 </div>

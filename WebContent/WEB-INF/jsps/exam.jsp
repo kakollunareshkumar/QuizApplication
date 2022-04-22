@@ -51,23 +51,34 @@ body {
             }
         }
     </script>
-
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head><br/>
 
 <body onload="examTimer()">
 
-<div style="position:absolute;left:50px;top:20px">
+
+<div id='cssmenu'>
+<ul>
+   <li class=''><a href='${pageContext.request.contextPath}'><span>Home</span></a></li>
+   <li><a href='${pageContext.request.contextPath}/login'><span>UserLogin</span></a></li>
+    <li><a href='${pageContext.request.contextPath}/admin_login'><span>AdminLogin</span></a></li>
+   <li><a href='${pageContext.request.contextPath}/register'><span>Create Account</span></a></li>
+   <li><a href='${pageContext.request.contextPath}/feedback'><span>Feedback</span></a></li>
+   <li><a href='${pageContext.request.contextPath}/contact'><span>Contact us</span></a></li>
+</ul>
+</div>
+
+<div style="position:absolute;left:50px;top:100px">
 <%
   int currentQuestion=((Exam)request.getSession().getAttribute("currentExam")).getCurrentQuestion();
- // System.out.println("Question Number "+currentQuestion+ " retrieved ");
  %>
 Current Question ${sessionScope.quest.questionNumber+1} / ${sessionScope.totalNumberOfQuizQuestions}
 </div>
 
-<div id="showtime" style="position:absolute;left:800px;top:20px"></div>
+<div id="showtime" style="position:absolute;left:800px;top:100px"></div>
 
  <div style="position:absolute;width:1000px;padding:25px;
-  height: 200px;border: 1px solid green ;left:100px;top:60px">
+  height: 200px;border: 1px solid green ;left:100px;top:200px">
 <span>${sessionScope.quest.question}</span><br/><br/>
 
 <form action="exam" method="post" name="questionForm" >

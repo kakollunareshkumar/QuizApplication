@@ -13,35 +13,27 @@
 <!-- JQuery CSS -->
 <link rel="stylesheet" type="text/css"
 	href="http://www.trirand.com/blog/jqgrid/themes/redmond/jquery-ui-1.8.1.custom.css" />
-<link rel="stylesheet" type="text/css"
-	href="http://www.trirand.com/blog/jqgrid/themes/ui.jqgrid.css" />
-<script type="text/javascript"
-	src="http://www.trirand.com/blog/jqgrid/js/jquery.js"></script>
-<script type="text/javascript"
-	src="http://www.trirand.com/blog/jqgrid/js/jquery-ui-1.8.1.custom.min.js"></script>
 
-<script type="text/javascript"
-	src="http://www.trirand.com/blog/jqgrid/js/jquery.layout.js"></script>
-<script type="text/javascript"
-	src="http://www.trirand.com/blog/jqgrid/js/i18n/grid.locale-en.js"></script>
-<script type="text/javascript"
-	src="http://www.trirand.com/blog/jqgrid/js/ui.multiselect.js"></script>
-<script type="text/javascript"
-	src="http://www.trirand.com/blog/jqgrid/js/jquery.jqGrid.min.js"></script>
-<script type="text/javascript"
-	src="http://www.trirand.com/blog/jqgrid/js/jquery.tablednd.js"></script>
-<script type="text/javascript"
-	src="http://www.trirand.com/blog/jqgrid/js/jquery.contextmenu.js"></script>
-
-<style type="text/css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <style type="text/css">
 body {
 	background:
 		url("${pageContext.request.contextPath}/images/background.jpeg");
 }
 </style>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 <body>
-
+<div id='cssmenu'>
+<ul>
+   <li class=''><a href='${pageContext.request.contextPath}'><span>Home</span></a></li>
+   <li><a href='${pageContext.request.contextPath}/login'><span>UserLogin</span></a></li>
+    <li><a href='${pageContext.request.contextPath}/admin_login'><span>AdminLogin</span></a></li>
+   <li><a href='${pageContext.request.contextPath}/register'><span>Create Account</span></a></li>
+   <li><a href='${pageContext.request.contextPath}/feedback'><span>Feedback</span></a></li>
+   <li><a href='${pageContext.request.contextPath}/contact'><span>Contact us</span></a></li>
+</ul>
+</div>
 
 	<div style="position: absolute; left: 500px; top: 70px">
 		<h3 align="center">Quiz Result</h3>
@@ -112,11 +104,7 @@ body {
 
 	</div>
 
-	<div style="position: absolute; left: 20%; top: 350px">
 
-		<table id="jqGrid"></table>
-		<div id="jqGridPager"></div>
-	</div>
 	<input type="hidden" name="hid" id="hid"
 		value="<%=session.getAttribute("id")%>">
 </body>

@@ -9,9 +9,8 @@
  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
  <style type="text/css">
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+html{    background:url("${pageContext.request.contextPath}/images/background.jpeg");
   background-size: cover;
   height:100%;
 }
@@ -123,13 +122,13 @@ input:focus, textarea:focus {
 	background-color:white;
 }
 
-#button-blue{
+#button-green{
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	float:left;
 	width: 100%;
 	border: #fbfbfb solid 4px;
 	cursor:pointer;
-	background-color: #3498db;
+	background-color: lightgreen;
 	color:white;
 	font-size:24px;
 	padding-top:22px;
@@ -141,9 +140,9 @@ input:focus, textarea:focus {
   font-weight:700;
 }
 
-#button-blue:hover{
+#button-green:hover{
 	background-color: rgba(0,0,0,0);
-	color: #0493bd;
+	color: lightgreen;
 }
 	
 .submit:hover {
@@ -203,52 +202,14 @@ function formValidation()
 
 </head>
 <body>
-<%-- <div style="position:absolute;left:50px;top:20px">
-<%
-  int currentQuestion=((Exam)request.getSession().getAttribute("currentExam")).getCurrentQuestion();
- // System.out.println("Question Number "+currentQuestion+ " retrieved ");
- %>
-Current Question ${sessionScope.quest.questionNumber+1} / 10
-</div>
 
-
- <div style="position:absolute;width:1000px;padding:25px;
-  height: 200px;border: 1px solid green ;left:100px;top:60px">
-<span>${sessionScope.quest.question}</span><br/><br/>
-<form action="exam" method="post" >
- <c:forEach var="choice" items="${sessionScope.quest.questionOptions}" varStatus="counter">
- <input type="radio" name="answer" value="${counter.count}" >${choice}  <br/>
- </c:forEach> <br/> 
- 
- <%
-   if(currentQuestion > 0)
-   {
- %>
- <input type="submit" name="action" value="Previous" />
- <%} %>
- 
- <%
-   if(currentQuestion < 9)
-   {
- %>
- <input type="submit" name="action" value="Next" />
- <%} %>
- <input type="submit" name="action" value="Finish Exam" />
-
- </form>
-</div>
-
-
-</body> --%>
 
 <div id='cssmenu'>
 <ul>
    <li class=''><a href='${pageContext.request.contextPath}'><span>Home</span></a></li>
    <li><a href='${pageContext.request.contextPath}/login'><span>Login</span></a></li>
    <li><a href='${pageContext.request.contextPath}/register'><span>Register</span></a></li>
-  <!--  <li class='#'><a href='#'><span>Submit a Question</span></a></li> -->
     <li><a href='${pageContext.request.contextPath}/feedback'><span>Feedback</span></a></li>
-   <!-- <li><a href='#'><span>Contribute</span></a></li> -->
    <li><a href='${pageContext.request.contextPath}/contact'><span>Contact us</span></a></li>
 </ul>
 </div>
@@ -273,7 +234,7 @@ Current Question ${sessionScope.quest.questionNumber+1} / 10
       
       
       <div class="submit">
-        <input type="submit" value="SEND" id="button-blue"/>
+        <input type="submit" value="SEND" id="button-green"/>
         <div class="ease"></div>
       </div>
     </form>
